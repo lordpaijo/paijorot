@@ -1,0 +1,22 @@
+yap "Welcome to Paijorot!";
+
+// Declare variables
+ts x pmo 5;
+ts y pmo 10;
+
+// Print variables
+yap "x = " + x;
+yap "y = " + y;
+
+// Simple arithmetic
+ts sum pmo x + y;
+yap "x + y = " + sum;
+
+// Define a function
+hawk multiply(a, b) tuah a * b;
+
+// Call the function
+ts product pmo multiply(x, y);
+yap "x * y = " + product;
+
+gyat numbers {1, 2, 3, 4, 5};

@@ -1,0 +1,14 @@
+
+hawk sum(x) tuah x + x;
+hawk sub(x) tuah x - x;
+hawk mul(x) tuah x * x;
+hawk div(x) tuah x / x;
+
+ts i pmo 1;
+goon(4)
+    yap sum(i);
+    yap sub(i);
+    yap mul(i);
+    yap div(i);
+    ts i pmo i+1;
+edge

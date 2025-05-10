@@ -1,0 +1,8 @@
+// Basic printing and variable declaration
+yap "skibidi"; // print skibidi
+ts x pmo 5;    // let x = 5
+yap x;         // print x
+
+// Input from user
+ts name pmo yeet;        // let name = read user input
+yap "Hello, " + name;    // print concatenated string

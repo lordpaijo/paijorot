@@ -1,6 +1,11 @@
 [package]
-name = "paijorot"
-version = "0.1.0"
+name = "spltui"
+version = "0.0.0"
 edition = "2024"
+authors = ["LordPaijo (Iyan) <iyanmaumakan.56@gmail.com>"]
+description = "Paijorot is a simple interpreted programming language implemented in Rust. It's designed as a hobby project with unique 'brainrot' syntax. ***(FULLY AI WRITTEN)***"
+license = "MIT"
+repository = "https://github.com/lordpaijo/spltui"
+documentation = "https://docs.rs/spltui"
 
 [dependencies]

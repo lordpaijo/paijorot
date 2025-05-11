@@ -1,0 +1,57 @@
+// Example program in the Paijorot language
+
+// Print a message
+yap "Welcome to Paijorot!";
+
+// Variable declaration and assignment
+ts x pmo 10;
+yap "x is";
+yap x;
+
+// Function definition
+hawk add(a, b) tuah a + b;
+
+// Function call
+ts result pmo add(x, 5);
+yap "x + 5 =";
+yap result;
+
+// Array declaration
+gyat numbers {1, 2, 3, 4, 5};
+yap "Array created:";
+yap numbers;
+
+// Conditional statement
+yo x == 10
+    yap "x is equal to 10";
+gurt
+    yap "x is not equal to 10";
+
+// Loop with fixed number of iterations
+yap "Counting from 1 to 5:";
+ts i pmo 0;
+goon(5)
+    ts i pmo i + 1;
+    yap i;
+edge
+
+// Get user input
+yap "Please enter a number:";
+ts user_input pmo yeet;
+yap "You entered:";
+yap user_input;
+
+// Infinite loop with break condition
+yap "Demonstrating loop with break:";
+ts counter pmo 0;
+goon
+    ts counter pmo counter + 1;
+    yap counter;
+
+    yo counter pmo 10
+        sybau;
+    gurt
+        yap "Not breaking yet...";
+edge
+
+yap "Loop finished!";

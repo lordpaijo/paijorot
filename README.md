@@ -1,113 +1,127 @@
-# Paijorot Language (FULLY AI WRITTEN)
+# Paijorot Programming Language
 
-Paijorot is a simple interpreted programming language implemented in Rust. It's designed as a hobby project with unique "brainrot" syntax. ***(FULLY AI WRITTEN)***
-
-## Features
-
-- Dynamic typing
-- Fixed indentations
-- Memory safety (following Rust's standards)
-- Simple syntax inspired by modern internet slang
-- Support for variables, functions, loops, and user input
+Paijorot is a simple, dynamically-typed, interpreted programming language built with Rust. It was created as a fun hobby project with a unique "brainrot" syntax.
 
 ## Syntax Overview
 
-### Print Statements
+### Printing Output (`yap`)
+Use `yap` to print to stdout (equivalent to Rust's `println!`):
 ```
-yap "Hello World";  // Equivalent to Rust's println!()
-```
-
-### Variable Declaration
-```
-ts x pmo 42;  // Equivalent to "let x = 42;" in Rust
+yap "Hello, World!";
 ```
 
-### Array Declaration
+### Variables (`ts` and `pmo`)
+- `ts` declares a variable (like `let` in Rust)
+- `pmo` assigns a value (like `=` in Rust)
 ```
-gyat numbers {1, 2, 3, 4, 5};  // Declare an array
-```
-
-### Function Declaration
-```
-hawk add(a, b) tuah a + b;  // Define a function that returns a + b
+ts x pmo 42;
 ```
 
-### Loops
+### Arrays (`gyat` or `gyatt`)
+Create arrays with `gyat` or `gyatt` followed by a name and elements in curly braces:
 ```
-// Infinite loop (until break)
+gyat numbers {1, 2, 3, 4, 5};
+```
+
+### Functions (`hawk` and `tuah`)
+Use `hawk` to define functions and `tuah` to specify the return value:
+```
+hawk sum(a, b) tuah a + b;
+```
+
+### Loops (`goon`, `goon(n)`, and `edge`)
+- `goon` is an infinite loop (like `loop` in Rust)
+- `goon(n)` loops n times (like a for loop)
+- `edge` marks the end of a loop block
+```
+goon(5)
+    yap "This will print 5 times";
+edge
+
+ts counter pmo 0;
 goon
-    // code here
-    sybau;  // break
-edge
-
-// For loop (20 iterations)
-goon(20)
-    // code here
+    yap counter;
+    ts counter pmo counter + 1;
+    yo counter > 5
+        sybau;
+    gurt
+        yap "Continuing...";
 edge
 ```
 
-### User Input
+### User Input (`yeet`)
+Read user input with `yeet` and store it in a variable:
 ```
-ts user_input pmo yeet;  // Read user input into variable
+ts user_input pmo yeet;
+```
+
+### Breaking Loops (`sybau`)
+Use `sybau` to break out of a loop:
+```
+goon
+    yo condition == true
+        sybau;
+    gurt
+        // continue looping
+edge
+```
+
+### Conditionals (`yo` and `gurt`)
+Use `yo` for if statements and `gurt` for else:
+```
+yo x > 10
+    yap "x is greater than 10";
+gurt
+    yap "x is not greater than 10";
+```
+
+## Building & Running
+
+### Prerequisites
+- Rust and Cargo
+
+### Building
+```
+cargo build --release
+```
+
+### Running a Paijorot program
+```
+./paijorot example.paijorot
+```
+
+### Running the REPL
+```
+./paijorot
 ```
 
 ## Example Program
 
 ```
-yap "Hello, world!";
+// Print a welcome message
+yap "skibidi";
 
-ts x pmo 10;
-ts y pmo 5;
+// Define a variable
+ts x pmo 5;
 
-hawk add(a, b) tuah a + b;
+// Define a function
+hawk sum(y) tuah y+y;
 
-yap "The sum is:";
-yap add(x, y);
+// Call the function and store result
+ts z pmo sum(x);
 
-yap "Enter your name:";
-ts name pmo yeet;
-
-yap "Hello, ";
-yap name;
-
-goon(3)
-    yap "Loop iteration";
-edge
+// Conditional statement
+yo z pmo 10
+    yap z;
+gurt
+    yap z;
 ```
 
-## Running Paijorot Programs
-
-1. Install the interpreter:
-   ```
-   cargo install paijorot
-   ```
-
-2. Run a Paijorot program:
-   ```
-   paijorot example.paijorot
-   ```
-
-## Language Reference
-
-### Keywords
-
-- `yap` - Print to standard output
-- `ts` - Declare a variable
-- `pmo` - Assign a value
-- `gyat` or `gyatt` - Declare an array
-- `hawk` - Define a function
-- `tuah` - Return a value
-- `goon` - Begin an infinite loop
-- `goon(n)` - Begin a loop for n iterations
-- `edge` - End a loop block
-- `yeet` - Read user input
-- `sybau` - Break out of the current loop
-
-### Operators
-
-- `+` - Addition
-- `-` - Subtraction
-- `*` - Multiplication
-- `/` - Division
-
-Enjoy programming with Paijorot!
+## Language Features
+- Dynamic typing
+- First-class functions
+- Arrays support
+- Conditional statements
+- Loops with break support
+- User input handling
+- Memory safety inherited from Rust
